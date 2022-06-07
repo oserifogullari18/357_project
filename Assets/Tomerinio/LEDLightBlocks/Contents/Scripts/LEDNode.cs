@@ -158,7 +158,7 @@ public class LEDNode : MonoBehaviour
     private void UpdateColor()
     {
         Material mat = rend.material;
-        Color baseColor = mat.color;
+        Color baseColor = mat.GetColor("_TintColor");// mat._TintColor;
 
         // Calculate the resulting color based on the intensity.
         Color finalColor = baseColor * Mathf.LinearToGammaSpace(intensity);
